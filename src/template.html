@@ -6,6 +6,60 @@
     <title>Todo RazList</title>
 </head>
 <body>
+    <dialog id = "dialog">
+        <form id="taskForm" method="dialog">
+            <legend>Please enter a new task</legend>
+            <div class="subgrid">
+            <div class="divtitle">
+                <label for="title">Title</label>
+                <input type="text" id="title" required>
+            </div>
+                <div class="description">
+                <label for="description">Description</label>
+                <input type="text" id="description" required>
+            </div>
+                <div class="dueDate">
+                <label for="date">Due date</label>
+                <input type="date" id="date" required>
+            </div>
+                <div class="priority">
+                <label for="priority">Set priority</label>
+                <select id = "priority">
+                    <option value="urgent">Urgent</option>
+                    <option value="important">Important</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+                <div class="divnotes">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" >
+                        </textarea>
+            </div>
+                <div class="assign">
+                    <label for="assign">Add to project</label>
+                    <input type="text" id ="assign" placeholder="Name of project..." required>
+            </div>
+        </div>
+            <div class="divbuttons">
+            <input type="submit" id="submit" value = "Submit">
+            <input type="submit" id="close" value="Close">
+        </div>
+        </form>
+    </dialog>
+    <dialog id ="projdialog">
+        <form id="projForm" method="dialog">
+            <legend>Please enter a new project</legend>
+            <div class="projtitle">
+                <label for="title">Title</label>
+                <input type="text" id="newtitle" required>
+            </div>
+            <div class="divbuttons">
+                <input type="submit" id="submit" value = "Submit">
+                <input type="submit" id="close" value="Close">
+            </div>
+        </form>
+    </dialog>
     <div class="dashboard">
         <div class="hellouser">
             <div class="usericon"></div>
@@ -14,13 +68,19 @@
                 <h3 class="username">Razvan</h3>
             </div>
         </div>
-        <button class="newproject">Add New Project</button>
         <div class="borderallp"><h1 class="allprojects">All Projects:</h1></div>
+        <div class="projectslist">
+
+        </div>
     </div>
     <div class="maincontainer">
         <div class="uppercontainer">
             <h1 class="logo">Todo Raz</h1>
+            <div class="buttons">
+            <button class ="home"> Home</button>
+            <button class="newproject">Add New Project</button>
             <button class="newitem">Add New Task</button>
+        </div>
         </div>
         <div class="lowercontainer">
             <h2 class="defaultheader">Recently Added Tasks</h2>
